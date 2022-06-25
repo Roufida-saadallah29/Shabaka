@@ -1,0 +1,769 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900&display=swap" rel="stylesheet">
+
+    
+
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css'%}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+
+    <link rel="stylesheet" href="{% static 'css/animate.css'%}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+    <title>Shabaka</title>
+   
+    <link rel="icon" href="{% static 'img/icon.png'%}" type="image/x-icon" />
+ 
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    />
+    
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'css/mdb.dark.min.css'%}" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+
+  </head>
+  <body>
+  
+
+  <div class="content">
+    <div class="container my-4">
+      <!-- Section: Components -->
+      <section class="">
+        <section id="demo" class="">
+          <h3 class="text-center text-primary"><strong>Interface web de supervision et
+            configuration automatique d’un petit réseau</strong></h3>
+          <hr class="my-5" />
+          <!--Section: Cards-->
+          <section>
+            <!--Grid row-->
+            <div class="row">
+             
+              <div class="col-lg-6 col-md-6 mb-4">
+                <div class="card">
+                  <div
+                    class="bg-image hover-overlay ripple"
+                    data-mdb-ripple-color="light"
+                  >
+                    <img
+                      src="{% static '/img/image_2022-06-12_19-01-13.png'%}"
+                      class="img-fluid"
+                    />
+                    <a href="#!">
+                      <div
+                        class="mask"
+                        style="background-color: rgba(251, 251, 251, 0.15)"
+                      ></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Topology</h5>
+                    <p class="card-text">
+                      Description.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 mb-4">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs position-relative" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="rip-tab" data-toggle="tab" href="#rip" role="tab" aria-controls="rip" aria-selected="true"
+                    >RIP</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="ospf-tab" data-toggle="tab" href="#ospf" role="tab" aria-controls="ospf" aria-selected="false"
+                    >OSPF</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="dhcp-tab" data-toggle="tab" href="#dhcp" role="tab" aria-controls="dhcp" aria-selected="false"
+                    >DHCP</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="staticR-tab" data-toggle="tab" href="#staticR" role="tab" aria-controls="staticR" aria-selected="false"
+                    >Static routing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="ping-tab" data-toggle="tab" href="#ping" role="tab" aria-controls="ping" aria-selected="false"
+                    >Ping</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="ping-tab" data-toggle="tab" href="#rTable" role="tab" aria-controls="ping" aria-selected="false"
+                    >Routing tabs</a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  
+                  <div class="tab-pane  active" id="rip" role="tabpanel" aria-labelledby="rip-tab">
+                    <div class="form-check form-switch float-end p-1 mt-5">
+                      <input class="form-check-input" type="checkbox" id="rip_switch" autocompleted="">
+                      <label class="form-check-label" for="rip_switch"> <h5>RIP</h5> </label>
+                    </div>
+                    <ul class="nav nav-tabs nav-tabs-faded bgc-info-m3 pt-5 pl-2 " role="tablist">
+                          <li class="nav-item dropdown mr-3px ">
+                            <p>Show RIP database</p>
+                            <a class="btn btn-default dropdown-toggle caret text-primary" data-toggle="dropdown" href="#" role="button"  aria-expanded="false">
+                              Choose a router
+                            </a>
+                            <div class="dropdown-menu radius-b-1 shadow-sm border-t-0 ml-n1px brc-secondary-l1 p-1">
+                              <a class="dropdown-item btn-a-bold mb-2px text-95" data-toggle="tab" href="#more2-tab1" id='show_rip_r1'>
+                                Router 1
+                              </a>
+                              <a class="dropdown-item btn-a-bold text-95" data-toggle="tab" href="#more2-tab2" id='show_rip_r2'>
+                                Router 2
+                              </a>
+                              <a class="dropdown-item btn-a-bold text-95" data-toggle="tab" href="#more2-tab3" id='show_rip_r3'>
+                                Router 3
+                              </a>
+                            </div>
+                          </li>
+                    </ul>
+                    <div class="tab-content p-5 ">
+                      <div class="tab-pane  fade text-95 " id="more2-tab1" role="tabpanel">
+                        <span>Router: <span class="text-primary"> R1</span></span>
+                        <div class="card card-body mt-3" id="r1_database">
+                            loading R1 rip database...
+                          </div>
+                      </div>
+                      <div class="tab-pane fade text-95" id="more2-tab2" role="tabpanel">
+                        <span>Router: <span class="text-primary"> R2</span></span>
+                        <div class="card card-body mt-3" id="r2_database">
+                          loading R2 rip database...
+                        </div>
+                      </div>   
+                      
+                      <div class="tab-pane fade text-95" id="more2-tab3" role="tabpanel">
+                        <span>Router: <span class="text-primary"> R3</span></span>
+                        <div class="card card-body mt-3" id="r3_database">
+                          loading R3 rip database...
+                        </div>
+                      </div> 
+                    
+                    </div>
+                  </div>
+                 
+
+
+                  
+                  <div class="tab-pane" id="ospf" role="tabpanel" aria-labelledby="ospf-tab">
+                   
+                      <div class="form-check form-switch float-end p-1 mt-5">
+                        <input class="form-check-input" type="checkbox" id="ospf_switch" autocompleted="">
+                        <label class="form-check-label" for="ospf_switch"> <h5>OSPF</h5> </label>
+                      </div>
+                      <ul class="nav nav-tabs nav-tabs-faded bgc-info-m3 pt-5 pl-2 " role="tablist">
+                            <li class="nav-item dropdown mr-3px ">
+                              <p>Show OSPF neighbors</p>
+                              <a class="btn btn-default dropdown-toggle caret text-primary" data-toggle="dropdown" href="#" role="button"  aria-expanded="false">
+                                Choose a router
+                              </a>
+                              <div class="dropdown-menu radius-b-1 shadow-sm border-t-0 ml-n1px brc-secondary-l1 p-1">
+                                <a class="dropdown-item btn-a-bold mb-2px text-95" data-toggle="tab" href="#more2-tab4" id="r1_ospf">
+                                  Router 1
+                                </a>
+                                <a class="dropdown-item btn-a-bold text-95" data-toggle="tab" href="#more2-tab5" id="r2_ospf">
+                                  Router 2
+                                </a>
+                                <a class="dropdown-item btn-a-bold text-95" data-toggle="tab" href="#more2-tab6" id="r3_ospf">
+                                  Router 3
+                                </a>
+                              </div>
+                            </li>
+                      </ul>
+                      <div class="tab-content p-5 ">
+                        <div class="tab-pane  fade text-95 " id="more2-tab4" role="tabpanel">
+                          <span>Router: <span class="text-primary"> R1</span></span>
+                          <div class="card card-body mt-3" id='r1_ospf_nei'>
+                            Loading R1 ospf neighbors...  
+                          </div>
+                        </div>
+                        
+                        <div class="tab-pane fade text-95" id="more2-tab5" role="tabpanel">
+                          <span>Router: <span class="text-primary"> R2</span></span>
+                          <div class="card card-body mt-3"  id='r2_ospf_nei'>
+                            Loading R2 ospf neighbors...
+                          </div>
+                        </div>   
+                        
+                        <div class="tab-pane fade text-95" id="more2-tab6" role="tabpanel">
+                          <span>Router: <span class="text-primary"> R3</span></span>
+                          <div class="card card-body mt-3" id='r3_ospf_nei'>
+                            Loading R3 ospf neighbors...
+                          </div>
+                        </div> 
+                      
+                      </div>
+                  
+                  </div>
+
+
+                  <div class="tab-pane" id="dhcp" role="tabpanel" aria-labelledby="dhcp-tab">
+                    <p class="pt-5">When you select a Network, it will automatically enable/disable the dhcp in all devices on that specific network.</p>
+                    <div class="dropdown ">
+
+                      <button class="btn btn-default dropdown-toggle" type="button" 
+                              id="dropdownMenu1" data-toggle="dropdown" 
+                              aria-haspopup="true" aria-expanded="true">
+                        <span class="caret text-primary"> Disable/Enable in:</span>
+                      </button>
+                      <ul class="dropdown-menu checkbox-menu allow-focus" aria-labelledby="dropdownMenu1">
+                        <li >
+                          <label class="text-black">
+                            <input type="checkbox" id="dhcp_r1"> Network 1: 192.168.1.0
+                          </label>
+                        </li>
+                        
+                        <li >
+                          <label class="text-black">
+                            <input type="checkbox" id="dhcp_r2"> Network 2: 192.168.2.0
+                          </label>
+                        </li>
+                        
+                        <!-- <li >
+                          <label class="text-black">
+                            <input type="checkbox"> Network 3: 192.168.3.0
+                          </label>
+                        </li> -->
+                        
+                      </ul>
+
+                    </div>
+                    <div class=" show mt-3">
+                    <p class="mt-3">
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#binding" aria-expanded="false" aria-controls="binding" id="show_dhcp_binding">
+                        Display current bindings
+                      </button>
+                    </p>
+                    <div class="collapse" id="binding">
+                      <div class="card card-body" id="dhcp_binding">
+                        Loading DHCP bindings...
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+
+                  <div class="tab-pane p-3" id="staticR" role="tabpanel" aria-labelledby="staticR-tab">
+                    <p class="font-weight-bold"> Add a static route for a :</p>
+                    <div class="show mt-3 ">
+                      <p >
+                        <button class="btn btn-default caret text-primary  " type="button" data-toggle="collapse" data-target="#addR" aria-expanded="false" aria-controls="addR">
+                         Router
+                        </button>
+                      </p>
+                      <div class="collapse" id="addR">
+                        <div class="card card-body">
+                          <form class="form px-3 pt-2" action="{% url 'set_ip_for_router' %}" method="post" id="router_form">
+                            <div class="col ">
+                              <div class="form-group row ">
+                                <label for="inputState">Router</label>
+                                <select id="inputState" class="custom-select my-1 mr-sm-2" name="router">
+                                  <option  selected>Choose...</option>
+                                  <option value="5010">Router 1</option>
+                                  <option value="5011">Router 2</option>
+                                  <option value="5012">Router 3</option>
+                                </select>
+                              </div>
+                              <div class="form-group row ">
+                                <label for="inputState">interface</label>
+                                <select id="inputState" class="custom-select my-1 mr-sm-2" name="int">
+                                  <option  selected>Choose...</option>
+                                  <option value="f0">FastEthernet0/0</option>
+                                  <option value="s0">Serial0/0</option>
+                                  <option value="s1">Serial0/1</option>
+                                </select>
+                              </div>
+                              <div class="form-group row ">
+                                <label for="inputAddress"> @IP</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="192.168.X.X" name="ip">
+                              </div>
+                           
+                            <button type="submit" class="btn btn-primary">CONFIRM</button>
+                          </div>
+                          </form> </div>
+                      </div>
+                    </div>
+                    <div class="show mt-3">
+                      <p >
+                        <button class="btn  btn-default caret text-primary " type="button" data-toggle="collapse" data-target="#addPc" aria-expanded="false" aria-controls="addPc">
+                         hosts
+                        </button>
+                      </p>
+                      <div class="collapse" id="addPc">
+                        <div class="card card-body">
+                          <form class="form px-3 pt-2" method="post" action="{% url 'set_ip_for_pc' %}">
+                            <div class="col ">
+                              <div class="form-group row ">
+                                <label for="inputState">PC</label>
+                                <select id="inputState" class="custom-select my-1 mr-sm-2" name="pc">
+                                  <option  selected>Choose...</option>
+                                  <option value="5006">PC1</option>
+                                  <option value="5002">PC2</option>
+                                  <option value="5005">PC3</option>
+                                  <option value="5007">PC4</option>
+                                </select>
+                              </div>
+                          
+                              <div class="form-group row ">
+                                <label for="inputAddress"> @IP</label>
+                                <input type="text" name="ip" class="form-control" id="inputAddress" placeholder="192.168.X.X">
+                              </div>
+                              
+                              <div class="form-group row ">
+                                <label for="inputAddress"> @gateway</label>
+                                <input type="text" name="gateway" class="form-control" id="inputAddress" placeholder="192.168.X.X">
+                              </div>
+                            <button type="submit" class="btn btn-primary">CONFIRM</button>
+                          </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                   
+                  </div>
+                  
+
+                  <div class="tab-pane" id="ping" role="tabpanel" aria-labelledby="ping-tab">
+                    <div class="card-body ">
+                      <p class="font-weight-bold" >Ping </p>
+                      
+                        <div class="form-outline mb-3">
+                          <label style="margin-left: 0px"
+                            >Ping from : </label
+                          >
+                          <select class="form-select" style="margin-bottom: 10px" id="source">
+                            <option value="5006">PC1</option>
+                            <option value="5002">PC2</option>
+                            <option value="5005">PC3</option>
+                            <option value="5007">PC4</option>
+                          </select>
+                        </div>
+                        {% comment %} <div class="form-outline mb-3">
+                          <label style="margin-left: 0px"
+                            >to : </label
+                          >
+                          <select class="form-select" style="margin-bottom: 10px" id="destination">
+                            <option value="5006">PC1</option>
+                            <option value="5002">PC2</option>
+                            <option value="5005">PC3</option>
+                            <option value="5007">PC4</option>
+                          </select>
+                        </div>
+                        </div> {% endcomment %}
+                        <div class="form-group row ">
+                          <label style="margin-left: 0px"
+                            >to : </label
+                          >
+                          {% comment %} <label for="inputAddress"></label> {% endcomment %}
+                          <input type="text" name="ip" class="form-control" id="destination" placeholder="192.168.X.X">
+                        </div>
+                        <div class="show mt-3">
+                          <p class="">
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#pinging" aria-expanded="false" aria-controls="pinging" id="ping">
+                              Show ping results:
+                            </button>
+                          </p>
+                          <div class="collapse" id="pinging">
+                            <div class="card card-body"  id="ping_result">
+                              pinging...
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  </div>
+
+                  <div class="tab-pane" id="rTable" role="tabpanel" aria-labelledby="rTable-tab">
+                    <ul class="nav nav-tabs nav-tabs-faded bgc-info-m3 pt-5 pl-2 " role="tablist">
+                          <li class="nav-item dropdown mr-3px ">
+                            <p>Show routers routing tables
+                            </p>
+                            <a class="btn btn-default dropdown-toggle caret text-primary" data-toggle="dropdown" href="#" role="button"  aria-expanded="false">
+                              Choose a router
+                            </a>
+                            <div class="dropdown-menu radius-b-1 shadow-sm border-t-0 ml-n1px brc-secondary-l1 p-1">
+                              <a class="dropdown-item btn-a-bold mb-2px text-95" data-toggle="tab" href="#more2-tab10" id="show_table_r1">
+                                Router 1
+                              </a>
+                              <a class="dropdown-item btn-a-bold text-95" data-toggle="tab" href="#more2-tab20" id="show_table_r2">
+                                Router 2
+                              </a>
+                              <a class="dropdown-item btn-a-bold text-95" data-toggle="tab" href="#more2-tab30" id="show_table_r3">
+                                Router 3
+                              </a>
+                            </div>
+                          </li>
+                    </ul>
+                    <div class="tab-content p-5 ">
+                      <div class="tab-pane  fade text-95 " id="more2-tab10" role="tabpanel">
+                        <span class="text-primary"> Routing table for R1:</span>
+                        <div class="card card-body mt-3" id="table_r1">
+                          Loading routing table for R1....
+                        </div>
+                      </div>
+                      
+                      <div class="tab-pane fade text-95" id="more2-tab20" role="tabpanel">
+                        <span class="text-primary">Routing table for R2 :</span>
+                        <div class="card card-body mt-3" id="table_r2">
+                          Loading routing table for R2....
+                        </div>
+                      </div>   
+                      
+                      <div class="tab-pane fade text-95" id="more2-tab30" role="tabpanel">
+                        <span class="text-primary"> Routing table for R3:</span>
+                        <div class="card card-body mt-3" id="table_r3">
+                         Loading routing table for R3....
+                        </div>
+                      </div> 
+                    
+                    </div>
+                    <ul class="nav nav-tabs nav-tabs-faded bgc-info-m3 pt-5 pl-2 " role="tablist">
+                      <li class="nav-item dropdown mr-3px ">
+                        <p>Show hosts routing tables
+                        </p>
+                        <a class="btn btn-default dropdown-toggle caret text-primary" data-toggle="dropdown" href="#" role="button"  aria-expanded="false">
+                          Choose a host
+                        </a>
+                        <div class="dropdown-menu radius-b-1 shadow-sm border-t-0 ml-n1px brc-secondary-l1 p-1">
+                          <a class="dropdown-item btn-a-bold mb-2px text-95" data-toggle="tab" href="#pc1" id="show_table_pc1">
+                            PC 1
+                          </a>
+                          <a class="dropdown-item btn-a-bold text-95" data-toggle="tab" href="#pc2" id="show_table_pc2">
+                            PC 2
+                          </a>
+                          <a class="dropdown-item btn-a-bold text-95" data-toggle="tab" href="#pc3" id="show_table_pc3">
+                            PC 3
+                          </a>
+                          <a class="dropdown-item btn-a-bold text-95" data-toggle="tab" href="#pc4" id="show_table_pc4">
+                            PC 4
+                          </a>
+                        </div>
+                      </li>
+                      
+                </ul>
+                <div class="tab-content p-5 ">
+                  
+
+                  <div class="tab-pane  fade text-95 " id="pc1" role="tabpanel">
+                    <span class="text-primary"> Routing table PC1:</span>
+                    <div class="card card-body mt-3" id="table_pc1">
+                      Loading routing table for PC1...
+                    </div>
+                  </div>
+                  
+                  <div class="tab-pane fade text-95" id="pc2" role="tabpanel">
+                    <span class="text-primary">Routing table PC2:</span>
+                    <div class="card card-body mt-3" id="table_pc2">
+                      Loading routing table for PC2...
+                    </div>
+                  </div>   
+                  
+                  <div class="tab-pane fade text-95" id="pc3" role="tabpanel">
+                    <span class="text-primary"> Routing table PC3:</span>
+                    <div class="card card-body mt-3" id="table_pc3">
+                      Loading routing table for PC3...
+                    </div>
+                  </div> 
+
+                  <div class="tab-pane fade text-95" id="pc4" role="tabpanel">
+                    <span class="text-primary"> Routing table PC4:</span>
+                    <div class="card card-body mt-3" id="table_pc4">
+                      Loading routing table for PC4...
+                    </div>
+                  </div> 
+                  
+                </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+           
+            <!--Grid row-->
+          </section>
+          
+
+        </section>
+      </section>
+      <!-- Section: Components -->
+    </div>
+  </div>
+  
+  <footer class="bg-dark text-center text-white">
+    <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright
+       </div>
+    <!-- Copyright -->
+    </footer>
+
+    <script>
+      $("#show_rip_r1").click(function(){
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'rip_database' %}",
+          data: {"router": 5010},
+          success: function (response) {
+            if((response+'').length == 0){
+              $("#r1_database").text("RIP protocol wasn't set yet");
+            }else{
+              $("#r1_database").html(response);
+            }
+          },
+      })})
+      $("#show_rip_r2").click(function(){
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'rip_database' %}",
+          data: {"router": 5011},
+          success: function (response) {
+            if((response+'').length == 0){
+              $("#r2_database").text("RIP protocol wasn't set yet");
+            }else{
+              $("#r2_database").html(response);
+            }
+          },
+      })})
+      $("#show_rip_r3").click(function(){
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'rip_database' %}",
+          data: {"router": 5012},
+          success: function (response) {
+            if((response+'').length == 0){
+              $("#r3_database").text("RIP protocol wasn't set yet");
+            }else{
+              $("#r3_database").html(response);
+            }
+          },
+      })})
+      $("#r1_ospf").click(function(){
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'ospf_neighboors' %}",
+          data: {"router": 5010},
+          success: function (response) {
+            if((response+'').length == 0){
+              $("#r1_ospf_nei").text("OSPF protocol wasn't set yet");
+            }else{
+              $("#r1_ospf_nei").html(response);
+            }
+          },
+      })})
+      $("#r2_ospf").click(function(){
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'ospf_neighboors' %}",
+          data: {"router": 5011},
+          success: function (response) {
+            if((response+'').length == 0){
+              $("#r2_ospf_nei").text("OSPF protocol wasn't set yet");
+            }else{
+              $("#r2_ospf_nei").html(response);
+            }
+          },
+      })})
+      $("#r3_ospf").click(function(){
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'ospf_neighboors' %}",
+          data: {"router": 5012},
+          success: function (response) {
+            if((response+'').length == 0){
+              $("#r3_ospf_nei").text("OSPF protocol wasn't set yet");
+            }else{
+              $("#r3_ospf_nei").html(response);
+            }
+          },
+      })})
+      $("#show_dhcp_binding").click(function(){
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'get_dhcp_binding' %}",
+          data: {"router": 5010},
+          success: function (response) {
+            if((response+'').length == 0){
+              $("#dhcp_binding").append("<p>DHCP wasn't set on R1 yet</p>");
+            }else{
+              $("#dhcp_binding").html('<br/><br/><h3>R1:</h3>');
+              $("#dhcp_binding").append(response);
+              $("#dhcp_binding").append('<br/><br/><h3>R2:</h3>');
+            }
+          },
+        })
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'get_dhcp_binding' %}",
+          data: {"router": 5011},
+          success: function (response) {
+            if((response+'').length == 0){
+              $("#dhcp_binding").append("<p>DHCP wasn't set on R2 yet</p>");
+            }else{
+              $("#dhcp_binding").append(response);
+            }
+          },
+        })
+      })
+      $("#ping").click(function(){
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'ping' %}",
+          data: {"host": $("#source").val(),
+        "address":$("#destination").val()
+        },
+          success: function (response) {
+              $("#ping_result").html(response);
+          },
+      })})
+      $("#rip_switch").click(function(){ 
+        if($("#rip_switch").is(":checked")){
+          $.ajax({
+            type: 'POST',
+            url: "{% url 'set_rip' %}",})    
+        }else{
+          $.ajax({
+            type: 'POST',
+            url: "{% url 'remove_rip' %}",})
+        }
+      })
+      $("#ospf_switch").click(function(){ 
+        if($("#ospf_switch").is(":checked")){
+          $.ajax({
+            type: 'POST',
+            url: "{% url 'set_ospf' %}",})    
+        }else{
+          $.ajax({
+            type: 'POST',
+            url: "{% url 'remove_ospf' %}",})
+        }
+      })
+      $("#dhcp_r1").click(function(){ 
+        if($("#dhcp_r1").is(":checked")){
+          $.ajax({
+            type: 'POST',
+            data: {'router': '5010'},
+            url: "{% url 'set_dhcp' %}",})    
+        }else{
+          $.ajax({
+            type: 'POST',
+            data: {'router': '5010'},
+            url: "{% url 'remove_dhcp' %}",})
+        }
+      })
+      $("#dhcp_r2").click(function(){ 
+        if($("#dhcp_r2").is(":checked")){
+          $.ajax({
+            type: 'POST',
+            data: {'router': '5011'},
+            url: "{% url 'set_dhcp' %}",})    
+        }else{
+          $.ajax({
+            type: 'POST',
+            data: {'router': '5011'},
+            url: "{% url 'remove_dhcp' %}",})
+        }
+      })
+      $("#show_table_r1").click(function(){
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'router_route_table' %}",
+          data: {"router": 5010},
+          success: function (response) {
+              $("#table_r1").html(response);
+          },
+      })})
+      $("#show_table_r2").click(function(){
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'router_route_table' %}",
+          data: {"router": 5011},
+          success: function (response) {
+              $("#table_r2").html(response);
+          },
+      })})
+      $("#show_table_r3").click(function(){
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'router_route_table' %}",
+          data: {"router": 5012},
+          success: function (response) {
+              $("#table_r3").html(response);
+          },
+      })})
+      $("#show_table_pc1").click(function(){
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'pc_route_table' %}",
+          data: {"pc": 5006},
+          success: function (response) {
+              $("#table_pc1").html(response);
+          },
+      })})
+      $("#show_table_pc2").click(function(){
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'pc_route_table' %}",
+          data: {"pc": 5002},
+          success: function (response) {
+              $("#table_pc2").html(response);
+          },
+      })})
+      $("#show_table_pc3").click(function(){
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'pc_route_table' %}",
+          data: {"pc": 5005},
+          success: function (response) {
+              $("#table_pc3").html(response);
+          },
+      })})
+      $("#show_table_pc4").click(function(){
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'pc_route_table' %}",
+          data: {"pc": 5007},
+          success: function (response) {
+              $("#table_pc4").html(response);
+          },
+      })})
+      
+    </script>
+    <script>
+      $(".checkbox-menu").on("change", "input[type='checkbox']", function() {
+      $(this).closest("li").toggleClass("active", this.checked);
+      });
+      $(document).on('click', '.allow-focus', function (e) {
+        e.stopPropagation();
+      });
+    </script>
+    <script type="text/javascript" src="{% static 'js/mdb.min.js'%}"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+    <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+    <script src="{% static 'js/popper.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'js/main.js'%}"></script>
+  </body>
+</html>

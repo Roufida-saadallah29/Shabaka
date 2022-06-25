@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewreport" content="width=device-width, initial-scale=1.0">
+	<title>Shabaka</title>
+    <link rel="icon" href="{% static 'img/icon.png'%}" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/shabaka.css'%}" />
+</head>
+<body>
+	<div class="container-fluid banner">
+		<div class="row">
+			<div class="col-md-12">
+				<nav class="navbar navbar-md">
+					<div class="navbar-brand">Shabaka</div>
+					<ul class="nav">
+						<li class="nav-item">
+							<a class="nav-link" href="./shabaka.html">Home</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-md-8 offset-md-2 info">
+				<p class="text-white">Il s’agit d’une application d’automatisation de la configuration et la supervision
+                    d’un réseau de complexité moyenne en utilisant les bonnes pratiques et la
+                    configuration professionnelle des réseaux.
+                </p>
+                <div class="card-body bg-light text-black-50">
+                    L’application devrait prendre en compte:
+                    <ul>
+						<li >
+                             L’auto-configuration du réseau selon les bonnes pratiques, les standards
+                            et les recommandations des grands constructeurs du domaine.   
+						</li>
+                        <li>
+                             La supervision, la gestion du réseau et les sauvegardes des fichiers
+                            configuration.
+                        </li>
+                        <li>
+                             La maintenance et les dépannages de quelques pannes récurrentes.
+                    
+                        </li>
+                        <li>
+                             Dans le cas où le réseau n’est pas encore créé, l’application doit aider à
+                            construire la topologie.
+                        </li>
+                        <li>
+                             Offrir une interface conviviale avec une simplicité d’utilisation pour
+                            qu’elle puisse être manipulée par les non-administrateurs réseaux.</p>
+                        
+                        </li>
+					</ul>
+                </div>
+                   
+                   
+			</div>
+		</div>
+	</div>
+</body>
+</html>
